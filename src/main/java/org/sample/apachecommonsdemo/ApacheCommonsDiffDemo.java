@@ -27,7 +27,7 @@ public class ApacheCommonsDiffDemo {
     public static void main(String[] args) {
         Student one = new Student("liudong", 12);
         Student two = new Student("liudong1", 14);
-        DiffResult diff = ObjectToDiff.of(one, two).diff();
+        DiffResult diff = ObjectToDiff.of(one, two).buildDiffResult();
         log.info(getDiff(diff));
     }
 
@@ -46,11 +46,11 @@ public class ApacheCommonsDiffDemo {
         String value();
     }
 
-    private interface EnableDiffLogable {
+    private interface EnableDiffLoggable {
 
     }
 
-    static class ObjectToDiff<T extends EnableDiffLogable> {
+    static class ObjectToDiff<T extends EnableDiffLoggable> {
         private T before;
         private T after;
 
@@ -59,11 +59,11 @@ public class ApacheCommonsDiffDemo {
             this.after = after;
         }
 
-        static <T extends EnableDiffLogable> ObjectToDiff<T> of(T before, T after) {
+        static <T extends EnableDiffLoggable> ObjectToDiff<T> of(T before, T after) {
             return new ObjectToDiff<>(before, after);
         }
 
-        DiffResult diff() {
+        DiffResult buildDiffResult() {
             DiffBuilder diffBuilder = new DiffBuilder(before, after, ToStringStyle.DEFAULT_STYLE);
             DiffFieldNameAndChineseNameUtils.getDiffNameMap(before.getClass()).forEach((field, chineseName) -> {
                 field.setAccessible(true);
@@ -80,7 +80,7 @@ public class ApacheCommonsDiffDemo {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    private static class Student implements EnableDiffLogable {
+    private static class Student implements EnableDiffLoggable {
         // @ChineseName("姓名")
         private String name;
 
@@ -89,7 +89,7 @@ public class ApacheCommonsDiffDemo {
     }
 
     static class DiffFieldNameAndChineseNameUtils {
-        static Map<Class<?>, Map<Field, String>> CLASS_DIFF_NAME_MAP = new HashMap<>();
+        static final Map<Class<?>, Map<Field, String>> CLASS_DIFF_NAME_MAP = new HashMap<>();
 
         private DiffFieldNameAndChineseNameUtils() {
         }
