@@ -1,0 +1,7 @@
+
+dsquid:S2142,"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ôö’Ùó,
+isquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(«ó×š8•ãŽÙó,
+[
+squid:S106A"9Replace this use of System.out or System.err by a logger.(Ù±›úÿÿÿÿ8ñÏˆÙó,
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(È›ªúÿÿÿÿ8“ÈŽÙó,
+Hsquid:S1068"%Remove this unused "r" private field.(½¿™ùÿÿÿÿ8•ãŽÙó,

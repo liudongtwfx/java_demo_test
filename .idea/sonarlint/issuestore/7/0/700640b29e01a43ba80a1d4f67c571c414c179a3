@@ -1,0 +1,11 @@
+
+V
+squid:S106/"9Replace this use of System.out or System.err by a logger.(‚¨Ö§8ªµñŒò,
+žsquid:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÖÆq8ÿÕ“ò,
+~squid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰¶ôÛÿÿÿÿÿ8ÀÅêŒò,
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚¨Ö§8§¸ðŒò,
+?squid:S2129"!Remove this "Integer" constructor(Øá¨œ8µÜóŒò,
+V
+squid:S106$"9Replace this use of System.out or System.err by a logger.(‚¨Ö§8ªµñŒò,
+¤squid:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´‘Öúÿÿÿÿ8²ï“ò,

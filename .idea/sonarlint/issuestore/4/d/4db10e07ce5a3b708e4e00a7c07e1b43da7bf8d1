@@ -1,0 +1,9 @@
+
+{
+squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(ÊÇ¬¤ûÿÿÿÿ8úøµÏõ,
+ksquid:S2259)"MA "NullPointerException" could be thrown; "targetInterface" is nullable here.(Ã·¦Ã8úøµÏõ,
+qsquid:S2259I"NA "NullPointerException" could be thrown; "overriddenMethod" is nullable here.(è±Ÿåÿÿÿÿÿ8úøµÏõ,
+psquid:S2259/"M"NullPointerException" will be thrown when invoking method "createAdapter()".(õë©¢ıÿÿÿÿ8úøµÏõ,
+9squid:S3878A"Remove this array creation.(ƒ‘ë¬8úøµÏõ,
+jsquid:S00112P"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8úøµÏõ,
+Usquid:S1135$"2Complete the task associated to this TODO comment.(ÅÂÙ²úÿÿÿÿ8úøµÏõ,
