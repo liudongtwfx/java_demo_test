@@ -1,7 +1,0 @@
-
-Msquid:S00108,")Either remove or fill this block of code.(í¼¿ãşÿÿÿÿ8€’ìÁõ,
-Hsquid:S00108.")Either remove or fill this block of code.(ï­£Ä8¤éìÁõ,
-Jsquid:S1068"'Remove this unused "str" private field.(Ì¶Ô‡ùÿÿÿÿ8¢ÿÁÌõ,
-Nsquid:S1172"+Remove this unused method parameter "args".(ÑÅÀÿÿÿÿÿ8Â†óÁõ,
-Hsquid:S00108")Either remove or fill this block of code.(Û­¨8Ïëœ©õ,
-}squid:S1488"ZImmediately return this expression instead of assigning it to the temporary variable "sb".(€ê±Õúÿÿÿÿ8¢ÿÁÌõ,

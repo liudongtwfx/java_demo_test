@@ -1,8 +1,0 @@
-
-[squid:S1854"8Remove this useless assignment to local variable "user".(Ü…¶íÿÿÿÿÿ8áïÌÌõ,
-Fsquid:S1148"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ8áïÌÌõ,
-dsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(‘í†8áïÌÌõ,
-Lsquid:S1481")Remove this unused "user" local variable.(Ü…¶íÿÿÿÿÿ8áïÌÌõ,
-Esquid:S1068"'Remove this unused "num" private field.(¥Û¾º8›ùÕÍõ,
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(ßÚÔÊ8áïÌÌõ,

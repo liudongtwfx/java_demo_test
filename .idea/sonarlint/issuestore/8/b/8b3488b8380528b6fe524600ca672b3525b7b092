@@ -1,35 +1,0 @@
-
-[
-squid:S106J"9Replace this use of System.out or System.err by a logger.(÷ÑÔùÿÿÿÿ8’Ä¿É‡-
-:squid:S1643="Use a StringBuilder instead.(’ŞÉ–8ìïØÆ‡-
-jsquid:S1192D"GDefine a constant instead of duplicating this literal "abcdef" 3 times.(¹–Â¼şÿÿÿÿ8›ÌæË‡-
-[
-squid:S106H"9Replace this use of System.out or System.err by a logger.(ù•»¶ùÿÿÿÿ8–úÆ‡-
-V
-squid:S106b"9Replace this use of System.out or System.err by a logger.(„Íêˆ8Íâ”‰-
-[
-squid:S106B"9Replace this use of System.out or System.err by a logger.(òÂ«éıÿÿÿÿ8˜’ãÆ‡-
-[
-squid:S106N"9Replace this use of System.out or System.err by a logger.(ı©†ùÿÿÿÿ8Šÿ´Ë‡-
-[
-squid:S106Q"9Replace this use of System.out or System.err by a logger.(ù‘Õùÿÿÿÿ8›ÎÚË‡-
-V
-squid:S106X"9Replace this use of System.out or System.err by a logger.(¨Ÿƒè8ÎÜéË‡-
-V
-squid:S106_"9Replace this use of System.out or System.err by a logger.(ß«Åº8Æåèó‡-
-V
-squid:S106["9Replace this use of System.out or System.err by a logger.(Ç–˜8ŠíË‡-
-V
-squid:S106O"9Replace this use of System.out or System.err by a logger.(æ¹÷ü8åƒ¶Ë‡-
-[
-squid:S106W"9Replace this use of System.out or System.err by a logger.(ğ€Áİşÿÿÿÿ8¡ÃçË‡-
-·%squid:RedundantThrowsDeclarationCheck7"Remove the declaration of thrown exception 'org.openjdk.jmh.runner.RunnerException', as it cannot be thrown from method's body.(¬„Ëõ8€ë”‰-
-[
-squid:S106F"9Replace this use of System.out or System.err by a logger.(Ù—²³ıÿÿÿÿ8„¥ğÆ‡-
-V
-squid:S106Z"9Replace this use of System.out or System.err by a logger.(±ìèõ8ŠíË‡-
-[
-squid:S106\"9Replace this use of System.out or System.err by a logger.(¨¿ıÛøÿÿÿÿ8ŠíË‡-
->squid:S2129U" Remove this "String" constructor(Ğ²…8¦ØìË‡-
-V
-squid:S106V"9Replace this use of System.out or System.err by a logger.(îĞ‚‡8£·èË‡-
