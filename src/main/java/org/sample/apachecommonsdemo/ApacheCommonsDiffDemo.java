@@ -15,8 +15,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author liudong17
@@ -25,8 +24,8 @@ import java.util.Map;
 @Slf4j
 public class ApacheCommonsDiffDemo {
     public static void main(String[] args) {
-        Student one = new Student("liudong", 12);
-        Student two = new Student("liudong1", 14);
+        Student one = new Student(Arrays.asList("liudong", "zhang"), new Birth(12));
+        Student two = new Student(Collections.singletonList("liudong"), new Birth(14));
         DiffResult diff = ObjectToDiff.of(one, two).buildDiffResult();
         log.info(getDiff(diff));
     }
@@ -64,7 +63,7 @@ public class ApacheCommonsDiffDemo {
         }
 
         DiffResult buildDiffResult() {
-            DiffBuilder diffBuilder = new DiffBuilder(before, after, ToStringStyle.DEFAULT_STYLE);
+            DiffBuilder diffBuilder = new DiffBuilder(before, after, ToStringStyle.JSON_STYLE, false);
             DiffFieldNameAndChineseNameUtils.getDiffNameMap(before.getClass()).forEach((field, chineseName) -> {
                 field.setAccessible(true);
                 try {
@@ -81,11 +80,11 @@ public class ApacheCommonsDiffDemo {
     @AllArgsConstructor
     @NoArgsConstructor
     private static class Student implements EnableDiffLoggable {
-        // @ChineseName("姓名")
-        private String name;
+        @ChineseName("姓名")
+        private List<String> names;
 
         @ChineseName("年龄")
-        private Integer age;
+        private Birth birth;
     }
 
     static class DiffFieldNameAndChineseNameUtils {
@@ -103,12 +102,19 @@ public class ApacheCommonsDiffDemo {
             if (CLASS_DIFF_NAME_MAP.containsKey(clazz)) {
                 return CLASS_DIFF_NAME_MAP.get(clazz);
             }
-            Map<Field, String> nameMap = new HashMap<>();
+            Map<Field, String> nameMap = new HashMap<>(16);
             for (Field field : FieldUtils.getFieldsWithAnnotation(clazz, ChineseName.class)) {
                 nameMap.put(field, field.getAnnotation(ChineseName.class).value());
             }
             CLASS_DIFF_NAME_MAP.put(clazz, nameMap);
             return nameMap;
         }
+    }
+
+
+    @Data
+    @AllArgsConstructor
+    private static class Birth {
+        private Integer age;
     }
 }

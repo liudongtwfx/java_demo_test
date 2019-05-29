@@ -1,4 +1,4 @@
-package org.sample;
+package org.sample.jdk;
 
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 

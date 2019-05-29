@@ -1,4 +1,4 @@
-package org.sample;
+package org.sample.jdk;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;

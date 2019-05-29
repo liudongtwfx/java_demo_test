@@ -1,4 +1,4 @@
-package org.sample;
+package org.sample.jdk;
 
 import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;

@@ -1,4 +1,4 @@
-package org.sample;
+package org.sample.jdk;
 
 /**
  * @author liudong17
