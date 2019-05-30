@@ -2,9 +2,6 @@ package org.sample.jdk;
 
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author liudong17
@@ -17,13 +14,9 @@ public class ThreadTest {
             .priority(Thread.MAX_PRIORITY)
             .build();
 
-    public static void main(String[] args) {
-        MainThread mainThread = new MainThread();
-        Thread thread = new Thread(mainThread);
-        thread.setDaemon(true);
-        ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(2, FACTORY);
-        scheduledExecutorService.scheduleAtFixedRate(new MyRunner(), 1, 2, TimeUnit.SECONDS);
-        thread.start();
+    public static void main(String[] args) throws Exception {
+        Thread.getAllStackTraces().keySet().forEach(System.out::println);
+        new Thread(new MyRunner()).start();
     }
 
     static class MyRunner implements Runnable {
@@ -31,19 +24,12 @@ public class ThreadTest {
 
         @Override
         public void run() {
-            System.out.println(Thread.currentThread().getName() + " hello world!" + num);
-            ++num;
-        }
-    }
-
-    static class MainThread implements Runnable {
-
-        @Override
-        public void run() {
             try {
-                Thread.sleep(5 * 1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.sleep(1000);
+                System.out.println("--------");
+                Thread.getAllStackTraces().keySet().forEach(System.out::println);
+            } catch (Exception e) {
+
             }
         }
     }
